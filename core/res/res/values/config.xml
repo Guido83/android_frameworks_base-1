@@ -1576,6 +1576,34 @@
          [This is only used if config_enableUpdateableTimeZoneRules and
          config_timeZoneRulesUpdateTrackingEnabled are true.] -->
     <integer name="config_timeZoneRulesCheckRetryCount">5</integer>
+	
+	    <!-- Hardware keys present on the device, stored as a bit field.
+         This integer should equal the sum of the corresponding value for each
+         of the following keys present:
+             1 - Home <--
+             2 - Back <--
+             4 - Menu <--
+             8 - Assistant (search) <--
+            16 - App switch <--
+            32 - Camera
+            64 - Volume rocker <--
+         For example, a device with Home, Back and Menu keys would set this
+         config to 7. -->
+    <integer name="config_deviceHardwareKeys">103</integer>
+
+    <!-- Hardware keys present on the device with the ability to wake, stored as a bit field.
+         This integer should equal the sum of the corresponding value for each
+         of the following keys present:
+             1 - Home
+             2 - Back
+             4 - Menu
+             8 - Assistant (search)
+            16 - App switch
+            32 - Camera
+            64 - Volume rocker
+         For example, a device with Home, Back and Menu keys would set this
+         config to 7. -->
+    <integer name="config_deviceHardwareWakeKeys">103</integer>
 
     <!-- Whether to enable network location overlay which allows network
          location provider to be replaced by an app at run-time. When disabled,
